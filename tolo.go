@@ -7,8 +7,6 @@ import (
 	"tolol/utils"
 )
 
-var data []byte
-
 func main() {
 
 	go autoUpdate()

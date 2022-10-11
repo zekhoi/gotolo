@@ -9,15 +9,6 @@ import (
 	"os"
 )
 
-type Data struct {
-	Status Status `json:"status"`
-}
-
-type Status struct {
-	Water int `json:"water"`
-	Wind  int `json:"wind"`
-}
-
 func WaterStatus(number float64) string {
 	tipe := "[Air] "
 	satuan := fmt.Sprint(number, " meter")
@@ -43,7 +34,7 @@ func WindStatus(number float64) string {
 }
 
 func UpdateJson() {
-	const filedir = "./constants/data.json"
+	const filedir = "./data/data.json"
 	file, err := os.OpenFile(filedir, os.O_RDWR|os.O_CREATE, 0755)
 
 	if err != nil {

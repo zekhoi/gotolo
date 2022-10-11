@@ -9,13 +9,8 @@ import (
 	"tolol/utils"
 )
 
-type Status struct {
-	Water string
-	Wind  string
-}
-
 func Handler(w http.ResponseWriter, r *http.Request) {
-	raw, err := ioutil.ReadFile("./constants/data.json")
+	raw, err := ioutil.ReadFile("./data/data.json")
 
 	if err != nil {
 		log.Fatal("Error when opening file: ", err)
